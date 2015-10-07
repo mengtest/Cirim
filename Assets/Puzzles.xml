@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<packs>
+  <packGroup rings="2" packsCompleted="0">
+    <pack segments="4" completed="false" levelsCompleted="0">
+      <level completed="false">
+        <ring>
+          <segment>0</segment>
+          <segment>1</segment>
+          <segment>2</segment>
+          <segment>3</segment>
+        </ring>
+        <ring>
+          <segment>1</segment>
+          <segment>2</segment>
+          <segment>3</segment>
+          <segment>0</segment>
+        </ring>
+      </level>
+      <level completed="false">
+        <ring>
+          <segment>0</segment>
+          <segment>1</segment>
+          <segment>2</segment>
+          <segment>3</segment>
+        </ring>
+        <ring>
+          <segment>3</segment>
+          <segment>2</segment>
+          <segment>1</segment>
+          <segment>0</segment>
+        </ring>
+      </level>
+      <level completed="false">
+        <ring>
+          <segment>0</segment>
+          <segment>2</segment>
+          <segment>1</segment>
+          <segment>3</segment>
+        </ring>
+        <ring>
+          <segment>0</segment>
+          <segment>1</segment>
+          <segment>2</segment>
+          <segment>3</segment>
+        </ring>
+      </level>
+      <level completed="false">
+        <ring>
+          <segment>0</segment>
+          <segment>0</segment>
+          <segment>1</segment>
+          <segment>1</segment>
+        </ring>
+        <ring>
+          <segment>2</segment>
+          <segment>2</segment>
+          <segment>3</segment>
+          <segment>3</segment>
+        </ring>
+      </level>
+      <level completed="false">
+        <ring>
+          <segment>0</segment>
+          <segment>1</segment>
+          <segment>0</segment>
+          <segment>1</segment>
+        </ring>
+        <ring>
+          <segment>2</segment>
+          <segment>3</segment>
+          <segment>2</segment>
+          <segment>3</segment>
+        </ring>
+      </level>
+    </pack>
+  </packGroup>
+  <packGroup rings="3" packsCompleted="0">
+  </packGroup>
+</packs>
