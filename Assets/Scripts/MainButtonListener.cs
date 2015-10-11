@@ -8,7 +8,7 @@ public class MainButtonListener : MonoBehaviour {
 		GameObject infoCarrier = GameObject.Find("InfoCarrier");
 		if (infoCarrier != null)
 		{
-			infoCarrier.GetComponent<InfoCarrierScript>().CurrentLevel = 0;
+			infoCarrier.GetComponent<LevelInfo>().CurrentLevel = 0;
 			Application.LoadLevel("Level00");
 		}
 	}

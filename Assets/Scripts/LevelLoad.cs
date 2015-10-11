@@ -17,7 +17,7 @@ public class LevelLoad : MonoBehaviour
 
 		if (infoCarrier != null) {
 			//Set text components
-			InfoCarrierScript ics = infoCarrier.GetComponent<InfoCarrierScript> ();
+			LevelInfo ics = infoCarrier.GetComponent<LevelInfo> ();
 			LevelText.text = string.Format ("{0}/{1}", 
 			                               ics.CurrentLevel + 1, 
 			                               ics.TotalLevels);

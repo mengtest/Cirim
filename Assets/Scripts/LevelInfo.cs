@@ -84,7 +84,7 @@ public class LevelInfo : MonoBehaviour
     private int _segments = 4;
 
     // Use this for initialization
-    void Awake ()
+    void Start ()
     {
         //Make InfoCarrier persistent
         DontDestroyOnLoad (this);

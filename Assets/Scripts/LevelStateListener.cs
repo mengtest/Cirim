@@ -29,7 +29,7 @@ public class LevelStateListener : MonoBehaviour
         samePattern = SamePattern(); //Lookup if the pattern is the same across all rings
 
         //Subscribe to events
-        SwapScript.OnSwap += SwapEvent;
+        SwapColor.OnSwap += SwapEvent;
         Movement.OnRotate += RotateEvent;
     }
 
@@ -37,7 +37,7 @@ public class LevelStateListener : MonoBehaviour
     void OnDestroy()
     {
         //Unsubscribe
-        SwapScript.OnSwap -= SwapEvent;
+        SwapColor.OnSwap -= SwapEvent;
         Movement.OnRotate -= RotateEvent;
     }
 
@@ -79,7 +79,7 @@ public class LevelStateListener : MonoBehaviour
             if (correctRotation)
             {
                 //Unsubscribe
-                SwapScript.OnSwap -= SwapEvent;
+                SwapColor.OnSwap -= SwapEvent;
                 Movement.OnRotate -= RotateEvent;
 
                 //Save that the level is complete
@@ -89,7 +89,7 @@ public class LevelStateListener : MonoBehaviour
                 if (infoCarrier != null)
                 {
                     //Get the script
-                    InfoCarrierScript ics = infoCarrier.GetComponent<InfoCarrierScript>();
+                    LevelInfo ics = infoCarrier.GetComponent<LevelInfo>();
 
                     //Load document
                     XmlDocument xmlDoc = new XmlDocument();

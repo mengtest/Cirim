@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: SwapButtons
+    uniqueID: 2803631707
+    locked: 0
+  - name: Ring 1
+    uniqueID: 3619097859
+    locked: 0
+  - name: Ring 2
+    uniqueID: 405829477
+    locked: 0
+  - name: Background
+    uniqueID: 142774171
+    locked: 0

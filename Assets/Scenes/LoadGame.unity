@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -111,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 435889862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc11a84943dd0c44cb6c5bf95e34df2c, type: 3}
+  m_Script: {fileID: 11500000, guid: 529980182b866af4dadde1a64fa0088a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &435889864
@@ -150,7 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1760297616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e35b3714fe8c854c80db73e4d02dd38, type: 3}
+  m_Script: {fileID: 11500000, guid: d2ced86c3e60ece4d86e7343d89dee81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1760297618

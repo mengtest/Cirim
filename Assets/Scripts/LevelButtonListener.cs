@@ -17,7 +17,7 @@ public class LevelButtonListener : MonoBehaviour
 		GameObject infoCarrier = GameObject.Find ("InfoCarrier");
 
 		if (infoCarrier != null) {
-			InfoCarrierScript ics = infoCarrier.GetComponent<InfoCarrierScript> ();
+			LevelInfo ics = infoCarrier.GetComponent<LevelInfo> ();
 			
 			if (ics.CurrentLevel - 1 == -1) {
 				if (ics.CurrentPack % 10 == 0) {
@@ -41,7 +41,7 @@ public class LevelButtonListener : MonoBehaviour
 		GameObject infoCarrier = GameObject.Find ("InfoCarrier");
 
 		if (infoCarrier != null) {
-			InfoCarrierScript ics = infoCarrier.GetComponent<InfoCarrierScript> ();
+			LevelInfo ics = infoCarrier.GetComponent<LevelInfo> ();
 
 			if (ics.CurrentLevel + 1 == ics.TotalLevels) {
 				if (ics.CurrentPack % 10 == ics.LastPack) {
