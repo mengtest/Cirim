@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SwapScript : MonoBehaviour {
+public class SwapColor : MonoBehaviour {
 
     public int ButtonNumber;
     public Transform innerRing;
     public Transform outerRing;
-    public CheckWin won;
+    public LevelStateListener won;
     public delegate void SwapAction();
     public static event SwapAction OnSwap;
     private float resetTime = 0;

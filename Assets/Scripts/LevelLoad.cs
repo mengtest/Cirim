@@ -4,7 +4,7 @@ using System.Collections;
 using System.Xml;
 using System.IO;
 
-public class LevelLoadScript : MonoBehaviour
+public class LevelLoad : MonoBehaviour
 {
 
 	private GameObject infoCarrier;
@@ -17,7 +17,7 @@ public class LevelLoadScript : MonoBehaviour
 
 		if (infoCarrier != null) {
 			//Set text components
-			InfoCarrierScript ics = infoCarrier.GetComponent<InfoCarrierScript> ();
+			LevelInfo ics = infoCarrier.GetComponent<LevelInfo> ();
 			LevelText.text = string.Format ("{0}/{1}", 
 			                               ics.CurrentLevel + 1, 
 			                               ics.TotalLevels);

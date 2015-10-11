@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
     private float prevAngle = 0;
     public float speed = 1f;
     public int rotation = 0;
-    public CheckWin won;
+    public LevelStateListener won;
 
     public delegate void RotateAction();
     public static event RotateAction OnRotate;

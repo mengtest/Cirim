@@ -3,9 +3,8 @@ using System.Collections;
 using System.Xml;
 using System.IO;
 
-public class InfoCarrierScript : MonoBehaviour
+public class LevelInfo : MonoBehaviour
 {
-
     public int TotalLevels {
         get {
             //Return the total number of levels within the current pack
@@ -85,7 +84,7 @@ public class InfoCarrierScript : MonoBehaviour
     private int _segments = 4;
 
     // Use this for initialization
-    void Awake ()
+    void Start ()
     {
         //Make InfoCarrier persistent
         DontDestroyOnLoad (this);

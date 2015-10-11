@@ -3,9 +3,8 @@ using System.Collections;
 using System.IO;
 using System.Xml;
 
-public class GameLoadScript : MonoBehaviour
+public class GameLoad : MonoBehaviour
 {
-
     // Init
     void Awake()
     {

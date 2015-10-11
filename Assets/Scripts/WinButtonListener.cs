@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WinCanvasButtonScript : MonoBehaviour
+public class WinButtonListener : MonoBehaviour
 {
 	private GameObject infoCarrier;
 
@@ -13,7 +13,7 @@ public class WinCanvasButtonScript : MonoBehaviour
 	public void Next ()
 	{
 		if (infoCarrier != null) {
-			InfoCarrierScript ics = infoCarrier.GetComponent<InfoCarrierScript> ();
+			LevelInfo ics = infoCarrier.GetComponent<LevelInfo> ();
 			
 			if (ics.CurrentLevel + 1 == ics.TotalLevels) {
 				if (ics.CurrentPack % 10 == ics.LastPack) {
@@ -37,7 +37,7 @@ public class WinCanvasButtonScript : MonoBehaviour
 	public void MainMenu ()
 	{
 		if (infoCarrier != null) {
-			InfoCarrierScript ics = infoCarrier.GetComponent<InfoCarrierScript> ();
+			LevelInfo ics = infoCarrier.GetComponent<LevelInfo> ();
 			
 			ics.CurrentPack = 0;
 			ics.CurrentLevel = 0;

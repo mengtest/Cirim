@@ -107,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -.5}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: .649999976, y: .649999976, z: 1}
   m_Children:
   - {fileID: 458900}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 109284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcd2e33131af24643bd039787a556c5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 24ba554f4b6816b46b0afb77f2c33e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonNumber: 1
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 125352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcd2e33131af24643bd039787a556c5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 24ba554f4b6816b46b0afb77f2c33e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonNumber: 0
@@ -255,10 +255,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 168416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcd2e33131af24643bd039787a556c5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 24ba554f4b6816b46b0afb77f2c33e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonNumber: 2
+  ButtonNumber: 3
   innerRing: {fileID: 0}
   outerRing: {fileID: 0}
   won: {fileID: 0}
@@ -270,10 +270,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 174074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcd2e33131af24643bd039787a556c5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 24ba554f4b6816b46b0afb77f2c33e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonNumber: 3
+  ButtonNumber: 4
   innerRing: {fileID: 0}
   outerRing: {fileID: 0}
   won: {fileID: 0}
