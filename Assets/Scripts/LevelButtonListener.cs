@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelButtonScript : MonoBehaviour
+public class LevelButtonListener : MonoBehaviour
 {
-
 	void Update ()
 	{
 		if (Application.platform == RuntimePlatform.Android) {

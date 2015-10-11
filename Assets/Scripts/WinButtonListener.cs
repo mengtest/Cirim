@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WinCanvasButtonScript : MonoBehaviour
+public class WinButtonListener : MonoBehaviour
 {
 	private GameObject infoCarrier;
 

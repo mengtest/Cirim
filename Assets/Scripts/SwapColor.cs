@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SwapScript : MonoBehaviour {
+public class SwapColor : MonoBehaviour {
 
     public int ButtonNumber;
     public Transform innerRing;

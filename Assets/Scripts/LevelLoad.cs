@@ -4,7 +4,7 @@ using System.Collections;
 using System.Xml;
 using System.IO;
 
-public class LevelLoadScript : MonoBehaviour
+public class LevelLoad : MonoBehaviour
 {
 
 	private GameObject infoCarrier;

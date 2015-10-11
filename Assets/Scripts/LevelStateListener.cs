@@ -4,7 +4,7 @@ using System.Collections;
 using System.IO;
 using System.Xml;
 
-public class CheckWin : MonoBehaviour
+public class LevelStateListener : MonoBehaviour
 {
     //Internal variables
     private bool samePattern;
