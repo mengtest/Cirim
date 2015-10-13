@@ -91,9 +91,9 @@ public class LevelStateListener : MonoBehaviour
                     //Get the script
                     LevelInfo ics = infoCarrier.GetComponent<LevelInfo>();
 
-                    //Load document
+                    //Load GameData.xml
                     XmlDocument xmlDoc = new XmlDocument();
-                    xmlDoc.Load(Path.Combine(Application.persistentDataPath, "Puzzles.xml"));
+                    xmlDoc.Load(Path.Combine(Application.persistentDataPath, "GameData.xml"));
 
                     //Get the group, pack, and level of the won game
                     XmlNode group = xmlDoc.SelectNodes("packs/packGroup")[ics.CurrentPack / 10];
@@ -103,7 +103,7 @@ public class LevelStateListener : MonoBehaviour
                     //Update level and pack attributes
                     if (!bool.Parse(level.Attributes["completed"].Value))
                     {
-                        level.Attributes["completed"].Value = true.ToString();
+                        level.Attributes["completed"].Value = "true";
                         int newVal = int.Parse(pack.Attributes["levelsCompleted"].Value) + 1;
                         pack.Attributes["levelsCompleted"].Value = newVal.ToString();
 
@@ -111,13 +111,13 @@ public class LevelStateListener : MonoBehaviour
                         if (newVal == pack.ChildNodes.Count)
                         {
                             //Update a group attribute and an additional pack attribute
-                            pack.Attributes["completed"].Value = true.ToString();
+                            pack.Attributes["completed"].Value = "true";
                             group.Attributes["packsCompleted"].Value = (int.Parse(group.Attributes["packsCompleted"].Value) + 1).ToString();
                         }
 
-                        xmlDoc.Save(Path.Combine(Application.persistentDataPath, "Puzzles.xml"));
+                        xmlDoc.Save(Path.Combine(Application.persistentDataPath, "GameData.xml"));
 
-                        ics.UpdateCompleted();
+                        ics.UpdateGameCompletion();
                     }
                 }
 

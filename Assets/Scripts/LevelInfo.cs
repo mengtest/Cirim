@@ -37,7 +37,7 @@ public class LevelInfo : MonoBehaviour
             _curPack = value;
             _curLevel = 0;
 
-            UpdateInfo ();
+            UpdateLevelInfo ();
         }
     }
 
@@ -89,26 +89,30 @@ public class LevelInfo : MonoBehaviour
         //Make InfoCarrier persistent
         DontDestroyOnLoad (this);
 
-        UpdateInfo (true);
+        UpdateLevelInfo (true);
     }
 
-    public void UpdateCompleted()
+    public void UpdateGameCompletion()
     {
-        //Load XML-document
+        //Load GameData.xml
         XmlDocument xmlDoc = new XmlDocument();
-        xmlDoc.Load(Path.Combine(Application.persistentDataPath, "Puzzles.xml"));
+        xmlDoc.Load(Path.Combine(Application.persistentDataPath, "GameData.xml"));
 
+        //Reset completedPacks counter
         _completedPacks = 0;
 
+        //Counter
         int i = 0;
         foreach (XmlNode group in xmlDoc.SelectNodes("packs/packGroup"))
         {
+            //Count completed packs
             _completedPacks += int.Parse(group.Attributes["packsCompleted"].Value);
 
+            //If it is the current group
             if (i == _curPack / 10)
             {
+                //Find the levels completed in the current pack
                 XmlNode pack = group.ChildNodes[_curPack % 10];
-
                 _completedLevels = int.Parse(pack.Attributes["levelsCompleted"].Value);
             }
 
@@ -116,43 +120,39 @@ public class LevelInfo : MonoBehaviour
         }
     }
 
-    private void UpdateInfo (bool firstTime = false)
+    private void UpdateLevelInfo (bool firstTime = false)
     {
-        //Load XML-document
+        //Load Puzzles.xml
         XmlDocument xmlDoc = new XmlDocument ();
-        xmlDoc.Load (Path.Combine (Application.persistentDataPath, "Puzzles.xml"));
+        xmlDoc.Load (Path.Combine (Application.dataPath, "Puzzles.xml"));
 
         int i = 0;
         bool packExists = false;
         //Loop through pack groups
-        foreach (XmlNode xn in xmlDoc.SelectNodes("packs/packGroup")) {
-            //Sum the number of completed packs
-            if (firstTime) {
-                _completedPacks += int.Parse (xn.Attributes ["packsCompleted"].Value);
-            }
+        foreach (XmlNode group in xmlDoc.SelectNodes("packs/packGroup")) {
             
             //If the current pack is in the specified pack group
-            if (i == _curPack / 10 && _curPack % 10 < xn.ChildNodes.Count)
+            if (i == _curPack / 10 && _curPack % 10 < group.ChildNodes.Count)
             {
                 packExists = true;
 
                 //Get the last index of packs within the current group
-                _lastPack = xn.ChildNodes.Count - 1;
+                _lastPack = group.ChildNodes.Count - 1;
                 
                 //Get the number of rings within the current group
-                _rings = int.Parse (xn.Attributes ["rings"].Value);
+                _rings = int.Parse (group.Attributes ["rings"].Value);
                 
-                //Select the right node
-                XmlNode xn2 = xn.ChildNodes [_curPack % 10];
+                //Select the right pack
+                XmlNode pack = group.ChildNodes [_curPack % 10];
 
                 //Find the number of levels in pack
-                _totalLevels = xn2.SelectNodes ("level").Count;
+                _totalLevels = pack.SelectNodes ("level").Count;
                 
                 //Find number of completed levels
-                _completedLevels = int.Parse (xn2.Attributes ["levelsCompleted"].Value);
+                _completedLevels = int.Parse (pack.Attributes ["levelsCompleted"].Value);
                 
                 //Get the number of segments in the current pack
-                _segments = int.Parse (xn2.Attributes ["segments"].Value);
+                _segments = int.Parse (pack.Attributes ["segments"].Value);
 
             }
 
@@ -160,5 +160,11 @@ public class LevelInfo : MonoBehaviour
         }
 
         if (!packExists) CurrentPack = 0;
+
+        //Sum the number of completed packs
+        if (firstTime)
+        {
+            UpdateGameCompletion();
+        }
     }
 }

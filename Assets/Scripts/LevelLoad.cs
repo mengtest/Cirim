@@ -25,9 +25,9 @@ public class LevelLoad : MonoBehaviour
 			XmlDocument xmlDoc = new XmlDocument ();
 
 			//Load puzzles.xml
-			xmlDoc.Load (Path.Combine (Application.persistentDataPath, "Puzzles.xml"));
+			xmlDoc.Load (Path.Combine(Application.dataPath, "Puzzles.xml"));
 
-			//Select first group, then pack and last level
+			//Select first group, then pack, and finally level
 			XmlNode level = xmlDoc.SelectNodes ("packs/packGroup") [ics.CurrentPack / 10].ChildNodes [ics.CurrentPack % 10].ChildNodes [ics.CurrentLevel];
 
 			for (int i = 0; i < level.ChildNodes.Count; i++) {
