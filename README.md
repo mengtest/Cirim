@@ -5,4 +5,4 @@ The goal of this game is to create an alternative puzzle with cirles as the main
 
 An additional feature that will be included in the future is colour swap, where the swap will not occur between the two adjacent segments but with the segment whose colour of the arrow matches the colour of the arrow you clicked on. But when you click on one double arrow, it will swap both sides with the segments alligned with respective colours of the arrows. 
 
-The game will be free for users on both Android and iOS. It should have various difficulties so that you will be challenged as your experience grows. 
+The game will be free for users on both Android and iOS. 
